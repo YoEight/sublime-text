@@ -2,7 +2,7 @@
 {
 	"variables":
 	{
-		"grey": "hsla(55, 8%, 70%, 0.7)",
+		"grey": "hsla(55, 8%, 90%, 0.7)",
 	},
 	"globals":
 	{
@@ -208,6 +208,18 @@
         	"scope": "meta.path.rust",
         	"foreground": "var(white)",
         	// "font_style": "italic",
+        },
+        {
+        	"name": "variable parameters",
+        	"scope": "variable.parameter",
+        	"foreground": "var(white)",
+        	"font_style": "regular",
+        },
+        {
+        	"name": "variable languages",
+        	"scope": "variable.language.rust",
+        	"foreground": "var(grey)",
+        	"font_style": "italic",
         },
         // {
         // {

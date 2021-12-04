@@ -407,6 +407,8 @@ contexts:
     - match: '@'
       scope: keyword.operator.rust
     - include: lifetime
+    - match: \bself\b
+      scope: variable.language.rust
     - match: '\b{{identifier}}\b(?!\s*(?:::|\{|\[|\())'
       scope: variable.parameter.rust
 
