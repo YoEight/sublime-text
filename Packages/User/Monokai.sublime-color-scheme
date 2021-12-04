@@ -179,6 +179,38 @@
         	"foreground": "var(grey)",
         	"font_style": "italic",
         },
+        {
+        	"name": "Storage type trait rust",
+        	"scope": "storage.type.trait",
+        	"foreground": "var(red2)",
+        	"font_style": "italic",
+        },
+        {
+        	"name": "entity name trait rust",
+        	"scope": "entity.name.trait",
+        	"foreground": "var(blue)",
+        },
+        {
+        	"name": "Generic type rust",
+        	"scope": "source.rust meta.function.rust meta.generic.rust",
+        	"foreground": "var(blue)",
+        	// "font_style": "italic",
+        },
+        {
+        	"name": "function parameters type rust",
+        	"scope": "source.rust meta.function.rust meta.function.parameters.rust",
+        	"foreground": "var(blue)",
+        	// "font_style": "italic",
+        },
+        {
+        	"name": "function exception for path parameters type rust",
+        	// "scope": "source.rust meta.function.rust meta.function.parameters.rust meta.path.rust",
+        	"scope": "meta.path.rust",
+        	"foreground": "var(white)",
+        	// "font_style": "italic",
+        },
+        // {
+        // {
         // {
         //     "name": "type static decl function rust",
         // 	"scope": "source.rust meta.impl.rust meta.block.rust meta.function.rust meta.block.rust",
