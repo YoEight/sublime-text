@@ -1,9 +1,148 @@
 [
-	// { "keys": ["j", "j"], "command": "exit_insert_mode",
-	// 	"context":
-	// 	[
-	// 		{ "key": "setting.command_mode", "operand": false },
-	// 		{ "key": "setting.is_widget", "operand": false },
-	// 	]
-	// }	
+    {
+        "command": "lsp_hover",
+        "keys": [
+            "K"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "hoverProvider"
+            }
+        ]
+    },
+    {
+        "command": "lsp_symbol_declaration",
+        "args": {
+            "side_by_side": false
+        },
+        "keys": [
+            "g",
+            "d",
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "declarationProvider"
+            },
+            {
+                "key": "auto_complete_visible",
+                "operator": "equal",
+                "operand": false
+            }
+        ]
+    },
+    {
+        "command": "lsp_symbol_implementation",
+        "args": {
+            "side_by_side": false
+        },
+        "keys": [
+            "g",
+            "i",
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "implementationProvider"
+            },
+            {
+                "key": "auto_complete_visible",
+                "operator": "equal",
+                "operand": false
+            }
+        ]
+    },
+        {
+        "command": "lsp_symbol_references",
+        "keys": [
+            "g",
+            "r",
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "referencesProvider"
+            },
+        ]
+    },
+    {
+        "command": "lsp_workspace_symbols",
+        "keys": [
+            " ",
+            "f",
+            "s",
+        ],
+        "context": [
+			{ "key": "setting.command_mode", "operand": true },
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "workspaceSymbolProvider"
+            }
+        ]
+    },
+    {
+        "command": "lsp_format_document",
+        "keys": [
+            " ",
+            "F",
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "documentFormattingProvider | documentRangeFormattingProvider"
+            }
+        ]
+    },
+    {
+        "command": "lsp_symbol_rename",
+        "keys": [
+            " ",
+            "r",
+            "n",
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "renameProvider"
+            }
+        ]
+    },
+    {
+        "command": "lsp_code_actions",
+        "keys": [
+            " ",
+            "c",
+            "a",
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "codeActionProvider"
+            }
+        ]
+    },
+    { 
+        "keys": ["alt+\\"], "command": "toggle_terminus_panel"
+    },
+    {
+    	"keys": ["ctrl+o"], "command": "prev_view",
+     	"context": [
+    		{ "key": "setting.command_mode", "operand": true },
+     	]
+     },
+     {
+    	"keys": ["ctrl+i"], "command": "next_view",
+     	"context": [
+    		{ "key": "setting.command_mode", "operand": true },
+     	]
+     },
 ]
