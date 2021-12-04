@@ -1477,6 +1477,8 @@ contexts:
       - include: basic-identifiers
       - match: '\b{{identifier}}!(?=\s*(\(|\{|\[))'
         scope: support.macro.rust
+      - match: '\b[[:lower:]_][[:lower:][:digit:]_]*(?=\()'
+        scope: variable.function.rust
       - match: '{{identifier}}'
       - match: '(?=<)'
         push: generic-angles
