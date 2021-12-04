@@ -1475,6 +1475,8 @@ contexts:
       # i32, etc when following ::
       - include: comments
       - include: basic-identifiers
+      - match: '\b{{identifier}}!(?=\s*(\(|\{|\[))'
+        scope: support.macro.rust
       - match: '{{identifier}}'
       - match: '(?=<)'
         push: generic-angles
