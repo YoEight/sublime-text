@@ -130,11 +130,11 @@
         	"scope": "source.rust meta.impl.rust meta.block.rust meta.function.rust meta.block.rust",
             "foreground": "var(white)",
         },
-        {
-            "name": "type static decl rust",
-        	"scope": "source.rust meta.impl.rust meta.block.rust meta.function.rust meta.block.rust meta.path.rust",
-            "foreground": "var(blue)",	
-        },
+        // {
+        //     "name": "type static decl rust",
+        // 	"scope": "source.rust meta.impl.rust meta.block.rust meta.function.rust meta.block.rust meta.path.rust",
+        //     "foreground": "var(blue)",	
+        // },
         {
         	"name": "storage modifier",
         	"scope": "storage.modifier",
@@ -196,12 +196,12 @@
         	"foreground": "var(blue)",
         	// "font_style": "italic",
         },
-        {
-        	"name": "function parameters type rust",
-        	"scope": "source.rust meta.function.rust meta.function.parameters.rust",
-        	"foreground": "var(blue)",
-        	// "font_style": "italic",
-        },
+        // {
+        // 	"name": "function parameters type rust",
+        // 	"scope": "source.rust meta.function.rust meta.function.parameters.rust",
+        // 	"foreground": "var(blue)",
+        // 	// "font_style": "italic",
+        // },
         {
         	"name": "function exception for path parameters type rust",
         	// "scope": "source.rust meta.function.rust meta.function.parameters.rust meta.path.rust",
