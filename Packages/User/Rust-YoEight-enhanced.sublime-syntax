@@ -124,7 +124,7 @@ contexts:
     - match: '\b(static)\s+(?:(mut)\s+)?({{identifier}})'
       captures:
         1: storage.type.rust
-        2: storage.modifier.rust
+        2: storage.modifier.mut.rust
         3: entity.name.constant.rust
 
     - match: '\b(break|continue)\b(?:\s+(''{{non_raw_ident}}))?'
@@ -402,7 +402,9 @@ contexts:
     - include: comments
     - match: '&'
       scope: keyword.operator.rust
-    - match: \b(mut|ref)\b
+    - match: \bmut\b
+      scope: storage.modifier.mut.rust
+    - match: \bref\b
       scope: storage.modifier.rust
     - match: '@'
       scope: keyword.operator.rust
@@ -601,7 +603,9 @@ contexts:
     - match: '&'
       scope: keyword.operator.rust
     - include: raw-pointer
-    - match: \b(mut|ref|const|unsafe)\b
+    - match: \bmut\b
+      scope: storage.modifier.mut.rust
+    - match: \b(ref|const|unsafe)\b
       scope: storage.modifier.rust
     - match: '\bas\b'
       # This is for qualified type paths <Type as TypePath>
@@ -1092,7 +1096,9 @@ contexts:
       set: impl-body
     - match: '(?=\bwhere\b)'
       push: impl-where
-    - match: \b(mut|ref)\b
+    - match: \bmut\b
+      scope: storage.modifier.mut.rust
+    - match: \bref\b
       scope: storage.modifier.rust
     - match: '{{identifier}}(?=<)'
       scope: entity.name.impl.rust
@@ -1566,7 +1572,10 @@ contexts:
     - match: \btrait\b
       scope: storage.type.trait.rust
 
-    - match: \b(mut|pub|unsafe|move|ref)\b
+    - match: \bmut\b
+      scope: storage.modifier.mut.rust
+
+    - match: \b(pub|unsafe|move|ref)\b
       scope: storage.modifier.rust
 
     - match: \b(crate|extern|use|where)\b
