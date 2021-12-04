@@ -221,6 +221,11 @@
         	"foreground": "var(grey)",
         	"font_style": "italic",
         },
+        {
+        	"name": "punctuation attribute rust",
+        	"scope": "punctuation.definition.annotation",
+        	"foreground": "var(grey)",
+        },
         // {
         // {
         // {
