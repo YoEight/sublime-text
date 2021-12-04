@@ -365,6 +365,7 @@ contexts:
       scope: support.type.rust
 
   return-type:
+    - include: basic-identifiers
     - match: '\bimpl\b'
       scope: storage.type.impl.rust
       push:
@@ -607,6 +608,8 @@ contexts:
               pop: true
         - include: type-any-identifier
     - include: lifetime
+    # - match: \bSelf\b
+      # scope: storage.type.self.rust
     - match: '\b([[:upper:]]|_*[[:upper:]][[:alnum:]_]*[[:lower:]][[:alnum:]_]*)\b(::)'
       scope: meta.path.rust storage.type.rust
       captures:
@@ -1439,6 +1442,8 @@ contexts:
       scope: storage.modifier.lifetime.rust
 
   basic-identifiers:
+    - match: \bSelf\b
+      scope: storage.type.self.rust
     - match: '\b(?:(?:r#)?[[:upper:]_][[:upper:][:digit:]_]+)\b'
       scope: constant.other.rust
     - match: '\b(c_[[:lower:][:digit:]_]+|[[:lower:]_][[:lower:][:digit:]_]*_t)\b'
@@ -1566,5 +1571,7 @@ contexts:
     - match: \b(virtual|become|priv|typeof|unsized|do|abstract|final|override|macro)\b
       scope: invalid.illegal.rust
 
-    - match: \b(super|self|Self)\b
+    - match: \b(super|self)\b
       scope: keyword.other.rust
+    - match: \bSelf\b
+      scope: storage.type.self.rust
