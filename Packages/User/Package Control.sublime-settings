@@ -5,12 +5,12 @@
 	],
 	"installed_packages":
 	[
+		"GitHub Theme",
 		"LSP",
 		"LSP-file-watcher-chokidar",
 		"LSP-gopls",
 		"LSP-rust-analyzer",
 		"Package Control",
-		"Sync Settings",
 		"Terminus",
 	],
 }
