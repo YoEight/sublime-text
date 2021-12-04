@@ -217,6 +217,9 @@ contexts:
     - match: '\b[[:lower:]_][[:lower:][:digit:]_]*(?=\()'
       scope: variable.function.rust
 
+    - match: '\.[[:lower:]_][[:lower:][:digit:]_]*(?=::)'
+      scope: variable.function.rust
+
     - match: '{{identifier}}'
 
     - match: '\.'
@@ -1467,7 +1470,7 @@ contexts:
   no-path-identifiers:
     - match: \b(self)\b
       scope: variable.language.rust
-    - match: \b(super)\b
+    - match: \b(super|crate)\b
       scope: keyword.other.rust
 
   no-type-names:
