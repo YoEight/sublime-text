@@ -150,7 +150,35 @@
         	"scope": "source.rust meta.struct.rust meta.block.rust storage.type.rust",
         	"foreground": "var(blue)",
         	"font_style": "regular",
-        }
+        },
+        {	"name": "Comment",
+        	"scope": "comment",
+        	"font_style": "italic",
+        },
+        {
+        	"name": "Storage type source rust",
+        	"scope": "storage.type.source",
+        	"foreground": "var(blue)",
+        	"font_style": "regular",
+        },
+        {
+        	"name": "Storage type Numeric rust",
+        	"scope": "storage.type.numeric",
+        	"foreground": "var(blue)",
+        	"font_style": "regular",
+        },
+        {
+        	"name": "Variable function",
+        	"scope": "variable.function",
+        	"foreground": "var(yellow2)",
+        	"font_style": "regular",
+        },
+        {
+        	"name": "Storage type Self rust",
+        	"scope": "storage.type.self",
+        	"foreground": "var(grey)",
+        	"font_style": "italic",
+        },
         // {
         //     "name": "type static decl function rust",
         // 	"scope": "source.rust meta.impl.rust meta.block.rust meta.function.rust meta.block.rust",
