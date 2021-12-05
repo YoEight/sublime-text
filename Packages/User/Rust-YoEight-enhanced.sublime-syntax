@@ -81,6 +81,8 @@ contexts:
         1: storage.type.type.rust
         2: entity.name.type.rust
       push:
+      - match: '(?=<)'
+        push: generic-angles
       - match: '=(?!=)'
         scope: keyword.operator.assignment.rust
         push: after-operator

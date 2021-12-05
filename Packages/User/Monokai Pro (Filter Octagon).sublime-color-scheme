@@ -51,6 +51,11 @@
 	    	"name": "Modifiers mut rust",
 	    	"scope": "storage.modifier.mut.rust",
 	    	"font_style": "italic",
+	    },
+	    {
+	    	"name": "Ignore function call in macro attribute call",
+	    	"scope": "meta.function-call.rust variable.function.rust",
+	    	"foreground": "#b2b9bd",
 	    }
 	]
 }
