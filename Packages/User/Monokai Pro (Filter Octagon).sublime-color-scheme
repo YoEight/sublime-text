@@ -28,12 +28,12 @@
 	    {
 	    	"name": "Rust macros",
 	    	"scope": "support.macro",
-	    	"foreground": "var(green)",
+	    	"foreground": "var(purple)",
 	    	"font_style": "italic",
 	    },
 	    {
-	    	"name": "Punctuations accessor",
-	    	"scope": "punctuation.accessor",
+	    	"name": "Punctuations",
+	    	"scope": "punctuation.accessor, punctuation.separator.colon",
 	    	"foreground": "var(red)"
 	    },
 	    {

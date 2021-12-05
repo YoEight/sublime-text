@@ -42,7 +42,7 @@ contexts:
     - match: '(''(?:{{non_raw_ident}}))\s*(:)'
       captures:
         1: entity.name.label.rust
-        2: punctuation.separator.rust
+        2: punctuation.separator.colon.rust
 
     - include: lifetime
 
@@ -211,7 +211,7 @@ contexts:
     - include: keywords
 
     - match: ','
-      scope: punctuation.separator.rust
+      scope: punctuation.separator.comma.rust
       push: after-operator
 
     - match: '\b[[:lower:]_][[:lower:][:digit:]_]*(?=\()'
@@ -302,7 +302,7 @@ contexts:
         - meta_content_scope: meta.function-call.rust
         - include: attribute-call
     - match: ','
-      scope: punctuation.separator.rust
+      scope: punctuation.separator.comma.rust
     - match: '='
       scope: keyword.operator.assignment.rust
     - include: strings
@@ -428,11 +428,11 @@ contexts:
           # Tuple struct field specifier.
           captures:
             1: constant.numeric.integer.decimal.rust
-            2: punctuation.separator.rust
+            2: punctuation.separator.colon.rust
         - match: '{{identifier}}\s*(:)'
           # Struct field specifier.
           captures:
-            1: punctuation.separator.rust
+            1: punctuation.separator.colon.rust
         - match: '\.\.'
           scope: keyword.operator.rust
         - include: pattern-param
@@ -474,7 +474,7 @@ contexts:
         - include: type-any-identifier
 
     - match: ','
-      scope: punctuation.separator.rust
+      scope: punctuation.separator.comma.rust
 
   closure:
     - meta_content_scope: meta.function.closure.rust
@@ -649,7 +649,7 @@ contexts:
           scope: punctuation.section.group.end.rust
           pop: true
         - match: ','
-          scope: punctuation.separator.rust
+          scope: punctuation.separator.comma.rust
         - include: type-any-identifier
     - match: '\+'
       scope: keyword.operator.rust
@@ -747,7 +747,7 @@ contexts:
         - include: visibility
         - include: type-any-identifier
         - match: ','
-          scope: punctuation.separator.rust
+          scope: punctuation.separator.comma.rust
 
   struct-classic:
     - meta_scope: meta.struct.rust
@@ -772,13 +772,13 @@ contexts:
       scope: variable.other.member.rust
       push:
         - match: ','
-          scope: punctuation.separator.rust
+          scope: punctuation.separator.comma.rust
           pop: true
         - match: '(?=\})'
           pop: true
         - include: comments
         - match: ':'
-          scope: punctuation.separator.rust
+          scope: punctuation.separator.colon.rust
         - include: type-any-identifier
     - match: '(?=\S)'
       # Abort for an invalid match.
@@ -864,7 +864,7 @@ contexts:
     - match: '(?=\})'
       pop: true
     - match: ','
-      scope: punctuation.separator.rust
+      scope: punctuation.separator.comma.rust
       pop: true
     - match: '='
       set: enum-discriminant
@@ -982,7 +982,7 @@ contexts:
     - match: '(\$\s*{{identifier}})\s*(:)\s*(ident|path|expr|ty|pat_param|pat|stmt|block|item|meta|tt|lifetime|vis|literal)'
       captures:
         1: variable.parameter.rust
-        2: punctuation.separator.rust
+        2: punctuation.separator.colon.rust
         3: storage.type.rust
 
     - match: '(\$)\s*(\()'
@@ -1123,7 +1123,7 @@ contexts:
       scope: keyword.other.rust
     - include: type-any-identifier
     - match: ':'
-      scope: punctuation.separator.rust
+      scope: punctuation.separator.colon.rust
 
   impl-body:
     - meta_scope: meta.impl.rust
@@ -1182,8 +1182,10 @@ contexts:
     - match: \bwhere\b
       scope: keyword.other.rust
     - include: type-any-identifier
-    - match: '[:,]'
-      scope: punctuation.separator.rust
+    - match: ':'
+      scope: punctuation.separator.colon.rust
+    - match: ','
+      scope: punctuation.separator.comma.rust
     # Escape for incomplete expression, or ';'
     - match: '(?=\S)'
       pop: true
@@ -1538,8 +1540,12 @@ contexts:
     - match: '[@~?$#'']'
       scope: keyword.operator.rust
 
-    - match: '[:;,]'
+    - match: ':'
+      scope: punctuation.separator.colon.rust
+    - match: ';'
       scope: punctuation.separator.rust
+    - match: ','
+      scope: punctuation.separator.comma.rust
 
   bool:
     - match: \b(true|false)\b
