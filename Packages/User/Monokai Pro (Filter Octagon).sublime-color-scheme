@@ -53,9 +53,14 @@
 	    	"font_style": "italic",
 	    },
 	    {
+	    	"name": "Rust Self storage type",
+	    	"scope": "storage.type.self.rust",
+	    	"foreground": "#b2b9bd",
+	    },
+	    {
 	    	"name": "Ignore function call in macro attribute call",
 	    	"scope": "meta.function-call.rust variable.function.rust",
 	    	"foreground": "#b2b9bd",
-	    }
+	    },
 	]
 }
