@@ -12,7 +12,7 @@
 	"highlight_line": true,
 	"always_show_minimap_viewport": true,
 	"trim_trailing_white_space_on_save": "all",
-	"file_tab_style": "square",
+	"file_tab_style": "rounded",
 	"hardware_acceleration": "opengl",
 	"remember_workspace": false,
 	"vintage_ctrl_keys": true,

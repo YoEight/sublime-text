@@ -14,8 +14,8 @@
 	        "foreground": "var(red)"
 	    },
 	    {
-	    	"name": "Rust storage source type",
-	        "scope": "storage.type.source, storage.type.numeric, support.type",
+	    	"name": "storage source type",
+	        "scope": "storage.type.source, storage.type.numeric, support.type, storage.type.go",
 	        "foreground": "var(blue)",
 	        "font_style": "regular",
 	    },
