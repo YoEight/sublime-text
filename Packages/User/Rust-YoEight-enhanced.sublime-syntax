@@ -217,8 +217,10 @@ contexts:
     - match: '\b[[:lower:]_][[:lower:][:digit:]_]*(?=\()'
       scope: variable.function.rust
 
-    - match: '\.[[:lower:]_][[:lower:][:digit:]_]*(?=::)'
-      scope: variable.function.rust
+    - match: '(\.)([[:lower:]_][[:lower:][:digit:]_]*(?=::))'
+      captures:
+        1: punctuation.accessor.dot.rust
+        2: variable.function.rust
 
     # - match: 'Debug'
       # scope: storage.type.source.rust
