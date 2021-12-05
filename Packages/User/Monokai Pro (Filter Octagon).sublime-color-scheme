@@ -20,9 +20,36 @@
 	        "font_style": "regular",
 	    },
 	    {
+	    	"name": "Rust storage function type",
+	        "scope": "storage.type.function",
+	        "foreground": "var(blue)",
+	        "font_style": "italic",
+	    },
+	    {
 	    	"name": "Rust macros",
 	    	"scope": "support.macro",
 	    	"foreground": "var(green)",
+	    	"font_style": "italic",
+	    },
+	    {
+	    	"name": "Punctuations accessor",
+	    	"scope": "punctuation.accessor",
+	    	"foreground": "var(red)"
+	    },
+	    {
+	    	"name": "Paramaters",
+	    	"scope": "variable.parameter",
+	    	"foreground": "var(white)",
+	    	"font_style": "regular",
+	    },
+	    {
+	    	"name": "Modifiers",
+	    	"scope": "storage.modifier",
+	    	"font_style": "regular",
+	    },
+	    {
+	    	"name": "Modifiers mut rust",
+	    	"scope": "storage.modifier.mut.rust",
 	    	"font_style": "italic",
 	    }
 	]
