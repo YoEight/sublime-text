@@ -1,0 +1,8 @@
+Packages/*
+!Packages/User/
+
+Local/
+Log/
+Installed\ Packages/
+
+*.swp

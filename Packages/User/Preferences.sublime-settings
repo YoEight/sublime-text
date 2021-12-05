@@ -2,8 +2,8 @@
 	"ignored_packages":[
 	],
 	"theme": "Adaptive.sublime-theme",
-	"color_scheme": "auto",
-	"font_face": "Cascadia Code",
+	"color_scheme": "Monokai Pro (Filter Octagon).sublime-color-scheme",
+	"font_face": "MonoLisa",
 	"font_size": 11,
 	"font_options": ["zero", "ss01", "ss02", "ss03", "ss04", "ss05", "calt", "onum"],
 	"vintage_start_in_command_mode": true,
