@@ -33,7 +33,7 @@
 	    },
 	    {
 	    	"name": "Punctuations",
-	    	"scope": "punctuation.accessor, punctuation.separator.colon",
+	    	"scope": "punctuation.accessor, punctuation.separator.colon, punctuation.separator.arrow",
 	    	"foreground": "var(red)"
 	    },
 	    {
